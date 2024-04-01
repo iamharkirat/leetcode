@@ -17,6 +17,8 @@ class Solution(object):
             val = v1 + v2 + carry
             carry = val // 10
             val = val % 10
+
+            # this creates a new node
             cur.next = ListNode(val)
 
             cur = cur.next
