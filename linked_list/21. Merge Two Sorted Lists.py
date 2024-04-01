@@ -15,12 +15,15 @@ class Solution:
         while l1 and l2:
             if l1.val < l2.val:
                 tail.next = l1
+                # pointer l1
                 l1 = l1.next
             else:
                 tail.next = l2
                 l2 = l2.next
+                # pointer l2
             tail = tail.next
 
+        # once out of loop pointers l1 & l2 are pointing at the remaining list
         tail.next = l1 if l1 else l2
 
         return dummy.next
